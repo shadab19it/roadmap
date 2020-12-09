@@ -1,0 +1,75 @@
+/** @format */
+
+@import "../../variables.scss";
+.addfeature-wrapper {
+  .addfeature-box {
+    margin: 7rem auto 0 auto;
+    max-width: 400px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+    .title {
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: $lt-font-color;
+    }
+    .desc {
+      font-size: 1.3rem;
+      margin: 15px 0 20px 0;
+      font-weight: 400;
+      color: $lt-font-color;
+    }
+    .form {
+      padding: 0 20px;
+    }
+    .form-group {
+      width: 100%;
+      text-align: left;
+      border: 1px solid rgba(35, 35, 35, 0.2);
+      border-radius: 4px;
+      margin-bottom: 15px;
+      background-color: #fff;
+      .label {
+        padding: 5px 10px 0 10px;
+        font-weight: 500;
+        letter-spacing: 0.6px;
+        font-size: 1rem;
+        color: $lt-font-dull-color;
+      }
+      .input-field {
+        width: 100%;
+        padding: 5px 10px;
+        outline: none;
+        border: none;
+        font-size: 1.1rem;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: $lt-font-color;
+        &::placeholder {
+          color: $lt-input-dull-color;
+        }
+      }
+    }
+  }
+
+  .action-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    .btn {
+      width: 100px;
+    }
+    .go-back {
+      width: 100px;
+      padding: 8px 15px;
+      border-radius: 3px;
+      border: 1px solid $lt-nav-main-bg;
+      cursor: pointer;
+      color: $lt-btn-primary;
+      align-self: flex-start;
+      margin-right: 20px;
+    }
+  }
+}

@@ -1,0 +1,202 @@
+/** @format */
+
+@import "../../variables.scss";
+.comment-wrapper {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  .featrues-details-info {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0), 0 1px 2px rgba(0, 0, 0, 0.35);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 3rem;
+
+    .header-info {
+      position: relative;
+      display: flex;
+      margin-bottom: 10px;
+      .feature-update-btn {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        .dots {
+          display: flex;
+          padding: 5px 0;
+          cursor: pointer;
+          .dot {
+            width: 5px;
+            height: 5px;
+            background-color: $lt-font-dull-color;
+            border-radius: 50%;
+            margin-right: 5px;
+            padding: 2px;
+          }
+          &:hover {
+            .dot {
+              background-color: $lt-font-color;
+            }
+          }
+        }
+      }
+
+      .feature-title {
+        margin-bottom: 5px;
+        margin-top: -7px;
+        color: $lt-font-color;
+        font-weight: 500;
+        font-size: 1.25rem;
+        text-transform: capitalize;
+      }
+      .feature-status {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 0.8rem;
+        color: $lt-btn-primary;
+      }
+    }
+    .feature-info {
+      display: flex;
+      .user-avatar {
+        margin-right: 15px;
+        .ant-avatar-image {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .auther-info {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        .auther-name {
+          font-size: 1.2rem;
+          display: inline-block;
+          margin-bottom: 0px;
+          font-weight: 500;
+          margin-top: -2px;
+        }
+        .feature-desc {
+          font-weight: 400;
+          color: $lt-font-color;
+          margin-bottom: 8px;
+          font-size: 1.1rem;
+        }
+        .date {
+          font-weight: 400;
+          font-size: 1rem;
+          margin-bottom: 50px;
+          color: $lt-font-dull-color;
+        }
+        .comment-field {
+          .ant-input {
+            font-weight: 400;
+            font-size: 1rem;
+            color: $lt-font-color;
+            padding-right: 20px;
+            &::placeholder {
+              font-weight: 500;
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.divider-text {
+  text-align: center;
+  margin: 25px 0 30px 0;
+  color: $lt-font-dull-color;
+  font-size: 1rem;
+}
+
+.view-all-comments {
+  padding: 10px 0 0 0;
+  max-height: 500px;
+  overflow-y: scroll;
+  // box-shadow: 0 1px 3px rgba(0, 0, 0, 0), 0 1px 2px rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .each-comment {
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    padding: 10px 20px;
+    position: relative;
+    display: flex;
+    min-height: 115px;
+    .user-avatar {
+      display: inline-block;
+      margin-right: 15px;
+      .ant-avatar-image {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .comment-detail {
+      flex: 1;
+      .edit-comment-field {
+        margin-top: 15px;
+      }
+      .author-name {
+        font-size: 1.3rem;
+        font-weight: 400;
+      }
+      .comment-msg {
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+      }
+      .comment-footer {
+        color: $lt-font-dull-color;
+        margin-top: 10px;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        .likes {
+          margin-left: 5px;
+        }
+        .edit-comment {
+          cursor: pointer;
+          &:hover {
+            color: $lt-font-color;
+            text-decoration: underline;
+          }
+        }
+        .dot {
+          width: 3px;
+          height: 3px;
+          border-radius: 100%;
+          background-color: $lt-font-dull-color;
+          margin: 3px 8px 0 8px;
+        }
+      }
+      .edit-cancel-btn {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        cursor: pointer;
+        &:hover {
+          color: $dark-btn-stop-bg;
+        }
+      }
+    }
+
+    .comment-like {
+      cursor: pointer;
+    }
+
+    .delete-comment {
+      cursor: pointer;
+      color: $lt-font-dull-color;
+      &:hover {
+        color: $lt-font-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}

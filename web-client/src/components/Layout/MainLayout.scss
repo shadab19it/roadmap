@@ -1,0 +1,10 @@
+@import "../../variables.scss";
+@import "~antd/dist/antd.css";
+
+.main-wrapper {
+  .page-content {
+    padding: 0 40px;
+    max-width: 1200px;
+    margin: 0px auto;
+  }
+}
